@@ -1,4 +1,5 @@
-# trial
+# vue-draggable-custom-examples
+a draggable demo based on vue-draggable&elementUI&Echarts
 
 ## Project setup
 ```
@@ -14,6 +15,3 @@ yarn serve
 ```
 yarn build
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
