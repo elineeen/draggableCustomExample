@@ -1,13 +1,18 @@
 <template>
-    <div class="chart-wrapper">
-        <v-chart id="logo" :options="options" autoresize />
-    </div>
-
+    <chart-draggable-wrapper>
+        <template #content>
+            <v-chart :z-index="1" id="logo" :options="options" autoresize @click.native.stop="dispatchTogglePanel" />
+        </template>
+    </chart-draggable-wrapper>
 </template>
 
 <script>
+    import ChartDraggableMixin from "./chart-draggable-mixin";
+    import ChartDraggableWrapper from "./chart-draggable-wrapper";
     export default {
         name: "chart-pie-draggable",
+        components: {ChartDraggableWrapper},
+        mixins: [ChartDraggableMixin],
         data(){
             return {
                 options: {
@@ -48,13 +53,17 @@
                     ]
                 }
             }
-        }
+        },
     }
 </script>
 
 <style scoped>
+    .echarts{
+        width: 100%;
+        height: 100%;
+    }
 .chart-wrapper{
     width: 100%;
-    min-height: 400px;
+    height:300px ;
 }
 </style>
