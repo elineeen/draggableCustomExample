@@ -16,7 +16,4 @@ yarn serve
 yarn build
 ```
 
-### try it online
-```
-http://elineeen.github.io/draggableCustomExample/
-```
+### [try it online](http://elineeen.github.io/draggableCustomExample/)
